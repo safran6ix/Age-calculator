@@ -51,10 +51,62 @@ const AgeCalculator = () => {
 
 
 return(
-  <div>
-    
+  <div style={styles.container}>
+    <div style={styles.calculator}>
+        <h1 style={styles.title}>Age Calculator</h1>
+
+      <div style={styles.inputGroup}>
+         <label style={styles.label}>
+            Enter your birth date:
+         </label>
+
+         <input
+          type="date"
+          value={birthDate}
+          onChange={(e) => setBirthDate(e.target.value)}
+          style={styles.input}
+          max={new Date().toISOString().split('T')[0]}
+         />
+      </div>
+
+      <div style={styles.buttonGroup}>
+        <button onClick={calculateAge} style={styles.button}>
+            Calculate Age
+        </button>
+        <button onClick={resetForm} style={styles.resetButton}>
+          Reset
+        </button>
+      </div>
+
+      {error && (
+        <div style={styles.error}>
+        {error}
+        </div>
+      )}
+
+      {age && (
+        <div style={styles.result}>
+          <h2 style={styles.resultTitle}>Your Age:</h2>
+          <div style={styles.ageDetails}>
+            <div style={styles.ageItem}>
+              <span style={styles.ageNumber}>{age.years}</span>
+              <span style={styles.ageLabel}>Years</span>
+            </div>
+            <div style={styles.ageItem}>
+              <span style={styles.ageNumber}>{age.months}</span>
+              <span style={styles.ageLabel}>Months</span>
+            </div>
+            <div style={styles.ageItem}>
+              <span style={styles.ageNumber}>{age.days}</span>
+              <span style={styles.ageLabel}>Days</span>
+            </div>
+          </div>
+          <p style={styles.totalDays}>
+            Total Days Alive: {age.years * 365 + age.months * 30 + age.days}+ days
+          </p>
+        </div>
+      )}
+    </div>
   </div>
-)
-
-
-}
+);
+};
