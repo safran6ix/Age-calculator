@@ -110,3 +110,134 @@ return(
   </div>
 );
 };
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+    backgroundColor: '#f0f2f5',
+    fontFamily: 'Arial, sans-serif'
+  },
+
+  calculator: {
+    backgroundColor: 'white',
+    borderRadius: '10px',
+    padding: '30px',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+    width: '90%',
+    maxWidth: '500px'
+  },
+
+  title: {
+    textAlign: 'center',
+    color: '#333',
+    marginBottom: '25px'
+  },
+
+  inputGroup: {
+    marginBottom: '20px'
+  },
+  
+  label: {
+    display: 'block',
+    marginBottom: '8px',
+    color: '#555',
+    fontWeight: 'bold'
+  },
+
+  input: {
+    width: '100%',
+    padding: '10px',
+    fontSize: '16px',
+    border: '1px solid #ddd',
+    borderRadius: '5px',
+    boxSizing: 'border-box'
+  },
+
+  buttonGroup: {
+    display: 'flex',
+    gap: '10px',
+    marginBottom: '20px'
+  },
+
+  button: {
+    flex: 1,
+    padding: '10px',
+    fontSize: '16px',
+    backgroundColor: '#007bff',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s'
+  },
+
+  resetButton: {
+    flex: 1,
+    padding: '10px',
+    fontSize: '16px',
+    backgroundColor: '#6c757d',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s'
+  },
+
+
+  error: {
+    backgroundColor: '#f8d7da',
+    color: '#721c24',
+    padding: '10px',
+    borderRadius: '5px',
+    marginBottom: '20px',
+    textAlign: 'center'
+  },
+
+  result: {
+    marginTop: '20px',
+    padding: '20px',
+    backgroundColor: '#e8f4f8',
+    borderRadius: '5px'
+  },
+
+  resultTitle: {
+    textAlign: 'center',
+    color: '#333',
+    marginBottom: '15px'
+  },
+  
+  ageDetails: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    marginBottom: '15px'
+  },
+
+  ageItem: {
+    textAlign: 'center'
+  },
+
+  ageNumber: {
+    display: 'block',
+    fontSize: '32px',
+    fontWeight: 'bold',
+    color: '#007bff'
+  },
+
+  ageLabel: {
+    color: '#666',
+    fontSize: '14px'
+  },
+
+  totalDays: {
+    textAlign: 'center',
+    color: '#666',
+    fontSize: '14px',
+    marginTop: '15px',
+    fontStyle: 'italic'
+  }
+};
+
+export default AgeCalculator;
